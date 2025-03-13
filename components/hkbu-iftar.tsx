@@ -5,10 +5,10 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import {
   MoonStar,
-  CalendarDays,
-  UtensilsCrossed,
-  GiftIcon,
-  Image,
+//   CalendarDays,
+//   UtensilsCrossed,
+//   GiftIcon,
+//   Image,
 } from 'lucide-react'
 import {
   Accordion,
