@@ -69,6 +69,12 @@
 
 
 @layer base {
+
+  html {
+    scroll-padding-top: 5rem; /* Adjust this value based on your navbar height */
+    scroll-behavior: smooth;
+  }
+  
   * {
     @apply border-border;
   }
