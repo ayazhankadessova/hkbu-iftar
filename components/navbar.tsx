@@ -2,7 +2,7 @@
 "use client"
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { MoonStar, Menu, X } from 'lucide-react'
+import { MoonStar, Menu } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 // import { ThemeToggle } from './theme-toggle'
 import { useState } from 'react'
