@@ -29,11 +29,11 @@ interface ScheduleItemProps {
 function ScheduleItem({ icon, title, time }: ScheduleItemProps) {
   return (
     <div className='w-full flex items-center gap-4 py-5 border-b border-rose-400/30'>
-      <div className='w-14 h-14 bg-black/5 rounded-[30px] flex items-center justify-center text-4xl'>
+      <div className='w-14 h-14 bg-black/5 rounded-[30px] flex items-center justify-center text-5xl'>
         {icon}
       </div>
       <div className='flex-1'>
-        <h3 className='text-green-950 text-xl font-medium'>{title}</h3>
+        <h3 className='text-green-950 text-xl font-medium font-sans'>{title}</h3>
       </div>
       <div className='text-green-950 text-xl'>{time}</div>
     </div>
@@ -61,7 +61,7 @@ function ActivityItem({ title, description }: ActivityItemProps) {
       </div>
       <div className='flex-1 space-y-2'>
         <h3 className='text-green-950 text-xl font-medium'>{title} ↗</h3>
-        <p className='text-stone-500'>{description}</p>
+        <p className='text-green-950/70'>{description}</p>
       </div>
     </div>
   )
@@ -115,7 +115,7 @@ export function HKBUIftar() {
 
       {/* Hero Section */}
       {/* Hero Section */}
-      <section className='w-full px-8 md:px-20 lg:px-40 py-14 bg-[url(/green-bg.png)] bg-cover bg-center flex flex-col md:flex-row justify-center items-center gap-8 mt-20'>
+      <section className='w-full px-8 md:px-20 lg:px-40 py-14 bg-[url(/green-bg.png)] bg-cover bg-center flex flex-col md:flex-row justify-center items-center gap-10 mt-20'>
         <div className='w-3/4 md:w-1/2 flex justify-center md:justify-start items-center'>
           <Image
             src='/main-pic.jpeg'
@@ -126,16 +126,14 @@ export function HKBUIftar() {
           />
         </div>
         <div className='flex-1 flex flex-col justify-center items-center text-center gap-6'>
-          <h1 className='text-green-950 text-5xl font-serif font-medium'>
+          <h1 className='text-yellow-500 text-7xl font-pinyon font-bold'>
             Annual Iftar
           </h1>
           <div className='gap-2 flex flex-col'>
-            <h3 className='text-stone-500 text-xl font-serif'>
-              Join us to celebrate togetherness!
+            <h3 className='text-green-950 text-xl font-sans'>
+              Join us to celebrate Ramadan!
             </h3>
-            <p className='text-stone-500 text-base font-serif'>
-              March 20, 2025
-            </p>
+            <p className='text-green-950 text-base font-sans'>March 20, 2025</p>
           </div>
         </div>
       </section>
@@ -143,15 +141,15 @@ export function HKBUIftar() {
       {/* About Section */}
       <section
         id='about'
-        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-zinc-100/50 flex flex-col justify-center items-center gap-14'
+        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-zinc-100/50 flex flex-col justify-center items-center gap-10'
       >
         <div className='w-full flex flex-col justify-start items-center gap-6'>
-          <h2 className='text-green-950 text-4xl font-serif font-medium leading-tight text-center max-w-lg'>
+          <h2 className='text-green-950 text-5xl font-pinyon font-bold leading-tight text-center max-w-lg'>
             What is Iftar?
           </h2>
         </div>
         <div className='w-full'>
-          <p className='text-xl text-stone-500 leading-relaxed font-serif'>
+          <p className='text-xl text-green-950/70 leading-relaxed font-sans'>
             Iftar is one of our most festive and memorable annual events where
             we demonstrate the excellence of our Muslim community.
             <span className='text-rose-400'>
@@ -179,10 +177,10 @@ export function HKBUIftar() {
       {/* Schedule Section */}
       <section
         id='schedule'
-        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-white flex flex-col justify-center items-center gap-14'
+        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-white flex flex-col justify-center items-center gap-10'
       >
         <div className='w-full flex flex-col justify-start items-center gap-6'>
-          <h2 className='text-yellow-600 text-4xl font-serif font-medium text-center max-w-lg'>
+          <h2 className='text-yellow-600 text-5xl font-pinyon font-bold text-center max-w-lg'>
             Schedule
           </h2>
         </div>
@@ -198,10 +196,10 @@ export function HKBUIftar() {
       {/* Activities Section */}
       <section
         id='activities'
-        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-[url(/green-bg.png)] bg-cover bg-center flex flex-col justify-center items-center gap-14'
+        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-[url(/green-bg.png)] bg-cover bg-center flex flex-col justify-center items-center gap-10'
       >
         <div className='w-full flex flex-col justify-start items-center gap-6'>
-          <h2 className='text-green-950 text-4xl font-serif font-medium text-center max-w-lg'>
+          <h2 className='text-yellow-600 text-5xl font-pinyon font-bold text-center max-w-lg'>
             Activities
           </h2>
         </div>
@@ -228,10 +226,10 @@ export function HKBUIftar() {
       {/* FAQ Section */}
       <section
         id='faq'
-        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-zinc-100/50 flex flex-col justify-center items-center gap-14'
+        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-zinc-100/50 flex flex-col justify-center items-center gap-10'
       >
         <div className='w-full flex flex-col justify-start items-center gap-6'>
-          <h2 className='text-green-950 text-4xl font-serif font-medium text-center max-w-lg'>
+          <h2 className='text-green-950 text-5xl font-pinyon font-bold text-center max-w-lg'>
             FAQ
           </h2>
         </div>
@@ -275,10 +273,10 @@ export function HKBUIftar() {
       {/* Feedback Section */}
       <section
         id='feedback'
-        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-white flex flex-col md:flex-row justify-center items-start gap-14'
+        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-white flex flex-col md:flex-row justify-center items-start gap-10'
       >
         <div className='flex-1 flex flex-col justify-start items-start gap-6'>
-          <h2 className='text-yellow-600 text-4xl font-serif font-medium leading-tight'>
+          <h2 className='text-yellow-600 text-5xl font-pinyon font-bold leading-tight'>
             Feedback Form
           </h2>
           <p className='text-green-950'>
@@ -313,7 +311,7 @@ export function HKBUIftar() {
             />
           </div>
 
-          <Button className='bg-red-300 hover:bg-red-400 text-white'>
+          <Button className='bg-red-300 hover:bg-rose-400 text-white'>
             Submit Feedback
           </Button>
         </div>
@@ -321,8 +319,8 @@ export function HKBUIftar() {
 
       {/* Footer */}
       <footer className='w-full p-14 bg-[url(/green-bg.png)] bg-cover bg-center flex justify-center items-center'>
-        <div className='flex flex-col justify-center items-center gap-14'>
-          <div className='text-center text-green-950 text-xl'>
+        <div className='flex flex-col justify-center items-center gap-10'>
+          <div className='text-center text-yellow-600 text-xl font-pinyon font-bold'>
             Contact
             <br />
             <br />
