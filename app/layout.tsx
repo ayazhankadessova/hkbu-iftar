@@ -46,6 +46,7 @@ export default function RootLayout({
         <script
           src='https://kit.fontawesome.com/eecf2e68e4.js'
           crossOrigin='anonymous'
+          async
         ></script>
       </head>
       <body
