@@ -105,20 +105,13 @@ export function HKBUIftar() {
           </p>
         </div>
         <div className='w-3/4 flex items-center justify-center'>
-          {/* <Image
-            src='/iftar-2.png'
-            alt='Iftar'
-            width={800}
-            height={450}
-            className='rounded-md border border-2 border-rose-400/30'
-          /> */}
           <Carousel className='w-full max-w-xs'>
             <CarouselContent>
-              {Array.from({ length: 9 }).map((_, index) => (
+              {Array.from({ length: 2 }).map((_, index) => (
                 <CarouselItem key={index}>
                   <div className='p-1'>
                     <Image
-                      src={`/iftar-gallery/iftar-${index + 1}.png`}
+                      src={`/iftar/iftar-${index + 1}.png`}
                       alt={`Iftar ${index}`}
                       width={800}
                       height={450}
