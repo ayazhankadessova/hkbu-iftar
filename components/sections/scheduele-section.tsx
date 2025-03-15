@@ -8,7 +8,7 @@ import {
 // Schedule Item Component
 function ScheduleItem({ icon, title, time }: ScheduleItemType) {
   return (
-    <div className='w-full flex items-center gap-4 py-5 border-b border-red-400/30'>
+    <div className='w-full flex items-center gap-4 py-5 border-b border-rose-400/30'>
       <div className='w-14 h-14 bg-black/5 rounded-[30px] flex items-center justify-center text-4xl'>
         {icon}
       </div>

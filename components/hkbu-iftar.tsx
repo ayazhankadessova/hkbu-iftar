@@ -11,6 +11,7 @@ import {
 import { Separator } from '@/components/ui/separator'
 import Image from 'next/image'
 import { ScheduleSection } from '@/components/sections/scheduele-section'
+import { SiteHeader } from '@/components/site-header'
 
 // Activity Item Component
 interface ActivityItemProps {
@@ -42,52 +43,13 @@ function ActivityItem({ title, description }: ActivityItemProps) {
 export function HKBUIftar() {
   return (
     <div className='min-h-screen flex flex-col'>
-      {/* Header/Navigation */}
-      {/* Header/Navigation */}
-      <header className='w-full px-8 md:px-20 lg:px-40 h-20 bg-white border-b border-rose-400/30 flex justify-between items-center fixed top-0 z-50'>
-        {/* MoonStar on left */}
-        <div className='flex items-center'>
-          <Image src='/logo.png' alt='Logo' width={85} height={50} />
-        </div>
-
-        {/* Navigation links on right */}
-        <nav className='flex justify-center items-center gap-8'>
-          <a
-            href='#about'
-            className='text-green-950 text-base font-normal hover:text-green-950 transition-colors'
-          >
-            About
-          </a>
-          <a
-            href='#schedule'
-            className='text-green-950 text-base font-normal hover:text-green-950 transition-colors'
-          >
-            Schedule
-          </a>
-          <a
-            href='#activities'
-            className='text-green-950 text-base font-normal hover:text-green-950 transition-colors'
-          >
-            Activities
-          </a>
-          <a
-            href='#faq'
-            className='text-green-950 text-base font-normal hover:text-green-950 transition-colors'
-          >
-            FAQ
-          </a>
-          <a
-            href='#feedback'
-            className='text-green-950 text-base font-normal hover:text-green-950 transition-colors'
-          >
-            Feedback
-          </a>
-        </nav>
-      </header>
+      <SiteHeader />
 
       {/* Hero Section */}
-      {/* Hero Section */}
-      <section className='w-full px-8 md:px-20 lg:px-40 py-14 bg-[url(/green-bg.png)] bg-cover bg-center flex flex-col md:flex-row justify-center items-center gap-10 mt-20'>
+      <section
+        id='top'
+        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-[url(/green-bg.png)] bg-cover bg-center flex flex-col md:flex-row justify-center items-center gap-10'
+      >
         <div className='w-3/4 md:w-1/2 flex justify-center md:justify-start items-center'>
           <Image
             src='/main-pic.jpeg'
@@ -273,27 +235,49 @@ export function HKBUIftar() {
       </section>
 
       {/* Footer */}
-      <footer className='w-full p-14 bg-[url(/green-bg.png)] bg-cover bg-center flex justify-center items-center'>
-        <div className='flex flex-col justify-center items-center gap-10'>
-          <div className='text-center text-yellow-600 text-xl font-pinyon font-bold'>
+      <footer
+        id='contact'
+        className='w-full px-8 md:px-20 lg:px-40 pt-14 pb-10 bg-[url(/green-bg.png)] bg-cover bg-center flex justify-center items-center flex flex-col gap-8'
+      >
+        <div className='gap-4 items-center flex flex-col justify-center'>
+          <h3 className='text-center text-yellow-600 text-5xl font-pinyon font-bold'>
             Contact
-            <br />
-            <br />
-            <div className='flex gap-4 justify-center'>
-              <a href='#' className='hover:text-green-950 transition-colors'>
-                <span className='sr-only'>WhatsApp</span>
-                📱
-              </a>
-              <a href='#' className='hover:text-green-950 transition-colors'>
-                <span className='sr-only'>Email</span>
-                ✉️
-              </a>
-            </div>
+          </h3>
+          <div className='flex gap-4 justify-center text-green-950 text-4xl'>
+            <a
+              href='https://wa.me/+77778502000'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='hover:text-red-300 transition-transform transform hover:scale-125'
+            >
+              <i className='fab fa-whatsapp'></i>
+            </a>
+            <a
+              href='mailto:kadessovaayazhan@gmail.com'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='hover:text-red-300 transition-transform transform hover:scale-125'
+            >
+              <i className='fa-solid fa-envelope'></i>
+            </a>
           </div>
-          <Separator className='w-full max-w-md' />
-          <div className='text-center text-green-950'>
-            © 2023 Iftar Event at University. All rights reserved.
-          </div>
+        </div>
+
+        <Separator className='w-full bg-rose-400/30' />
+        <div className='flex flex-col sm:flex-row items-center gap-2 text-sm text-green-950/70'>
+          <p>© 2025 Iftar at HKBU</p>
+          <span className='hidden sm:inline'>•</span>
+          <p>
+            Made with ♥ by{' '}
+            <a
+              href='https://github.com/ayazhankad'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-green-950/50 hover:text-rose-400 transition-colors underline underline-offset-2 underline-thickness-1 decoration-green-950/50'
+            >
+              ayazhankad
+            </a>
+          </p>
         </div>
       </footer>
     </div>
