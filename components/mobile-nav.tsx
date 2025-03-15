@@ -106,7 +106,7 @@ export default function MobileNav() {
                 {dialog.title}
               </MobileLink>
             ))}
-          </div>
+          </div> 
         </SheetContent>
       </div>
     </Sheet>

@@ -12,6 +12,13 @@ import { Separator } from '@/components/ui/separator'
 import Image from 'next/image'
 import { ScheduleSection } from '@/components/sections/scheduele-section'
 import { SiteHeader } from '@/components/site-header'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
 
 // Activity Item Component
 interface ActivityItemProps {
@@ -52,7 +59,7 @@ export function HKBUIftar() {
       >
         <div className='w-3/4 md:w-1/2 flex justify-center md:justify-start items-center'>
           <Image
-            src='/main-pic.jpeg'
+            src='/main-pic-2.png'
             width={800}
             height={600}
             alt='2024 iftar'
@@ -98,13 +105,32 @@ export function HKBUIftar() {
           </p>
         </div>
         <div className='w-3/4 flex items-center justify-center'>
-          <Image
+          {/* <Image
             src='/iftar-2.png'
             alt='Iftar'
             width={800}
             height={450}
             className='rounded-md border border-2 border-rose-400/30'
-          />
+          /> */}
+          <Carousel className='w-full max-w-xs'>
+            <CarouselContent>
+              {Array.from({ length: 9 }).map((_, index) => (
+                <CarouselItem key={index}>
+                  <div className='p-1'>
+                    <Image
+                      src={`/iftar-gallery/iftar-${index + 1}.png`}
+                      alt={`Iftar ${index}`}
+                      width={800}
+                      height={450}
+                      className='rounded-md border border-2 border-rose-400/30'
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
@@ -160,7 +186,7 @@ export function HKBUIftar() {
               <AccordionTrigger className='text-green-950 text-xl font-medium'>
                 I am not fasting. Can I attend?
               </AccordionTrigger>
-              <AccordionContent className='text-green-950'>
+              <AccordionContent className='text-green-950/70'>
                 Yes, this event is open to all HKBU students and staff.
               </AccordionContent>
             </AccordionItem>
@@ -169,7 +195,7 @@ export function HKBUIftar() {
               <AccordionTrigger className='text-green-950 text-xl font-medium'>
                 Is food halal?
               </AccordionTrigger>
-              <AccordionContent className='text-green-950'>
+              <AccordionContent className='text-green-950/70'>
                 All the food has been ordered from halal certified restaurants
                 and snacks are halal, too.
               </AccordionContent>
@@ -179,8 +205,26 @@ export function HKBUIftar() {
               <AccordionTrigger className='text-green-950 text-xl font-medium'>
                 I want to volunteer!
               </AccordionTrigger>
-              <AccordionContent className='text-green-950'>
-                Send an email to Ayazhan.
+              <AccordionContent className='text-green-950/70'>
+                Send us an{' '}
+                <a
+                  href='mailto:kadessovaayazhan@gmail.com'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-green-950/70 hover:text-red-300 transition-colors underline underline-offset-2 underline-thickness-1'
+                >
+                  email
+                </a>{' '}
+                or text us on{' '}
+                <a
+                  href='https://wa.me/+77778502000'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='hover:text-red-300 transition-transform transform hover:scale-125 underline underline-offset-2 underline-thickness-1'
+                >
+                  WhatsApp
+                </a>
+                .
               </AccordionContent>
             </AccordionItem>
           </Accordion>

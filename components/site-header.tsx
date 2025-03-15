@@ -73,7 +73,7 @@ export function SiteHeader() {
   }
 
   return (
-    <header className='w-full px-8 md:px-10 lg:px-14 h-20 bg-white border-b border-rose-400/90/30 flex justify-between items-center sticky top-0 z-50'>
+    <header className='w-full px-8 md:px-10 lg:px-14 h-20 bg-white border-b border-rose-400/30 flex justify-between items-center sticky top-0 z-50'>
       <div className='flex items-center'>
         <Image src='/logo.png' alt='Logo' width={85} height={50} />
       </div>
