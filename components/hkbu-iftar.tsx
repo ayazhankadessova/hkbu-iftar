@@ -1,16 +1,7 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
-// import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-// import {
-//   MoonStar,
-//   //   CalendarDays,
-//   //   UtensilsCrossed,
-//   //   GiftIcon,
-//   //   Image,
-//   LocateIcon,
-// } from 'lucide-react'
 import {
   Accordion,
   AccordionContent,
@@ -19,26 +10,7 @@ import {
 } from '@/components/ui/accordion'
 import { Separator } from '@/components/ui/separator'
 import Image from 'next/image'
-
-interface ScheduleItemProps {
-  icon: string
-  title: string
-  time: string
-}
-
-function ScheduleItem({ icon, title, time }: ScheduleItemProps) {
-  return (
-    <div className='w-full flex items-center gap-4 py-5 border-b border-rose-400/30'>
-      <div className='w-14 h-14 bg-black/5 rounded-[30px] flex items-center justify-center text-5xl'>
-        {icon}
-      </div>
-      <div className='flex-1'>
-        <h3 className='text-green-950 text-xl font-medium font-sans'>{title}</h3>
-      </div>
-      <div className='text-green-950 text-xl'>{time}</div>
-    </div>
-  )
-}
+import { ScheduleSection } from '@/components/sections/scheduele-section'
 
 // Activity Item Component
 interface ActivityItemProps {
@@ -79,7 +51,7 @@ export function HKBUIftar() {
         </div>
 
         {/* Navigation links on right */}
-        {/* <nav className='flex justify-center items-center gap-8'>
+        <nav className='flex justify-center items-center gap-8'>
           <a
             href='#about'
             className='text-green-950 text-base font-normal hover:text-green-950 transition-colors'
@@ -110,7 +82,7 @@ export function HKBUIftar() {
           >
             Feedback
           </a>
-        </nav> */}
+        </nav>
       </header>
 
       {/* Hero Section */}
@@ -130,10 +102,10 @@ export function HKBUIftar() {
             Annual Iftar
           </h1>
           <div className='gap-2 flex flex-col'>
-            <h3 className='text-green-950 text-xl font-sans'>
+            <h3 className='text-green-950 text-xl'>
               Join us to celebrate Ramadan!
             </h3>
-            <p className='text-green-950 text-base font-sans'>March 20, 2025</p>
+            <p className='text-green-950 text-base'>March 20, 2025</p>
           </div>
         </div>
       </section>
@@ -149,7 +121,7 @@ export function HKBUIftar() {
           </h2>
         </div>
         <div className='w-full'>
-          <p className='text-xl text-green-950/70 leading-relaxed font-sans'>
+          <p className='text-xl text-green-950/70 leading-relaxed'>
             Iftar is one of our most festive and memorable annual events where
             we demonstrate the excellence of our Muslim community.
             <span className='text-rose-400'>
@@ -174,24 +146,7 @@ export function HKBUIftar() {
         </div>
       </section>
 
-      {/* Schedule Section */}
-      <section
-        id='schedule'
-        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-white flex flex-col justify-center items-center gap-10'
-      >
-        <div className='w-full flex flex-col justify-start items-center gap-6'>
-          <h2 className='text-yellow-600 text-5xl font-pinyon font-bold text-center max-w-lg'>
-            Schedule
-          </h2>
-        </div>
-
-        <div className='w-full space-y-4'>
-          <ScheduleItem icon='🌙' title='Iftar Time' time='6:30 PM' />
-          <ScheduleItem icon='🕌' title='Prayer' time='6:40 PM' />
-          <ScheduleItem icon='🎉' title='Activities' time='7:00 PM' />
-          <ScheduleItem icon='🍽️' title='Dinner' time='7:30 PM' />
-        </div>
-      </section>
+      <ScheduleSection />
 
       {/* Activities Section */}
       <section

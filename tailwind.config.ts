@@ -10,9 +10,6 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    fontFamily: {
-      sans: ['"PT Sans"', 'sans-serif'],
-    },
     extend: {
       fontFamily: {
         // Add a custom font family named 'inconsolata'
