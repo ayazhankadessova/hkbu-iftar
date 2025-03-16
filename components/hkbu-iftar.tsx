@@ -158,7 +158,7 @@ export function HKBUIftar() {
                       width={800}
                       height={450}
                       className='rounded-md border border-2 border-rose-400/30'
-                      priority={index < 5}
+                      priority={index < 10}
                       quality={index === 0 ? 100 : 60}
                       loading={index < 5 ? 'eager' : 'lazy'}
                     />
