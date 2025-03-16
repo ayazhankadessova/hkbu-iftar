@@ -360,7 +360,7 @@ export function HKBUIftar() {
           <p>
             Made with ♥ by{' '}
             <a
-              href='https://github.com/ayazhankad'
+              href='https://github.com/ayazhankadessova'
               target='_blank'
               rel='noopener noreferrer'
               className='text-green-950/50 hover:text-rose-400 transition-colors underline underline-offset-2 underline-thickness-1 decoration-green-950/50'
