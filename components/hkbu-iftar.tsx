@@ -132,7 +132,7 @@ export function HKBUIftar() {
             meaningful connections and cultural understanding.
           </p>
           <p className='text-lg text-green-950/70 leading-relaxed'>
-            Together, we'll{' '}
+            Together, we will{' '}
             <span className='text-rose-400'>create memorable moments</span>{' '}
             through engaging activities, heartfelt reflections, and a delicious
             feast that celebrates our diverse community bonds.
