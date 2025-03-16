@@ -6,12 +6,12 @@ export interface ScheduleItem {
 }
 
 export const scheduleData: ScheduleItem[] = [
-  { icon: '📝', title: 'Registration', time: '6:15PM' },
-  { icon: '🕌', title: 'Adhan', time: '6:37PM' },
-  { icon: '🍽️', title: 'Dinner', time: '6:40PM' },
-  { icon: '📚', title: 'Ramadan Presentations', time: '7:00PM' },
-  { icon: '🎮', title: 'Activities', time: '7:20PM' },
-  { icon: '🎁', title: 'Lucky Draw', time: '7:50PM' },
-  { icon: '💬', title: 'Sharings', time: '8:00PM' },
-  { icon: '👋', title: 'Event End', time: '8:15PM' },
+  { icon: '📝', title: 'Registration', time: '6:15 PM' },
+  { icon: '🕌', title: 'Adhan', time: '6:37 PM' },
+  { icon: '🍽️', title: 'Dinner', time: '6:50 PM' },
+  { icon: '📚', title: 'Ramadan Presentations', time: '7:10 PM' },
+  { icon: '🎮', title: 'Activities', time: '7:30 PM' },
+  { icon: '🎁', title: 'Lucky Draw', time: '8:00 PM' },
+  { icon: '💬', title: 'Sharings', time: '8:10 PM' },
+  { icon: '👋', title: 'Event End', time: '8:30 PM' },
 ]

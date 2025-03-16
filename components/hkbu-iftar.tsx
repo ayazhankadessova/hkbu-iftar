@@ -1,4 +1,6 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -19,6 +21,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
+import Link from 'next/link'
 
 // Activity Item Component
 interface ActivityItemProps {
@@ -40,7 +43,15 @@ function ActivityItem({ title, description }: ActivityItemProps) {
         />
       </div>
       <div className='flex-1 space-y-2'>
-        <h3 className='text-green-950 text-xl font-medium'>{title} ↗</h3>
+        <Link href={'/public'} className='block group'>
+          <h3 className='text-green-950 text-xl font-medium'>
+            {title} <i className='fas fa-arrow-up-right'></i>
+            {/* <i className='fa-solid fa-arrow-up-right'></i> */}
+            <span className='text-sm font-semibold inline-block transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-0.5'>
+              <i className='fa-regular  fa-arrow-up-right-from-square'></i>{' '}
+            </span>
+          </h3>
+        </Link>
         <p className='text-green-950/70'>{description}</p>
       </div>
     </div>
@@ -48,6 +59,17 @@ function ActivityItem({ title, description }: ActivityItemProps) {
 }
 
 export function HKBUIftar() {
+
+   useEffect(() => {
+     const imageUrls = Array.from({ length: 9 }).map(
+       (_, index) => `/iftar-gallery/iftar-${index + 1}.webp`
+     )
+     imageUrls.forEach((url) => {
+       const img = new window.Image()
+       img.src = url
+     })
+   }, [])
+
   return (
     <div className='min-h-screen flex flex-col'>
       <SiteHeader />
@@ -59,9 +81,9 @@ export function HKBUIftar() {
       >
         <div className='w-3/4 md:w-1/2 flex justify-center md:justify-start items-center'>
           <Image
-            src='/main-pic-2.png'
-            width={800}
-            height={600}
+            src='/main-pic-2.webp'
+            width={400}
+            height={225}
             alt='2024 iftar'
             className='rounded-md border border-2 border-rose-400/30'
           />
@@ -74,7 +96,7 @@ export function HKBUIftar() {
             <h3 className='text-green-950 text-xl'>
               Join us to celebrate Ramadan!
             </h3>
-            <p className='text-green-950 text-base'>March 20, 2025</p>
+            <p className='text-green-950 text-sm'>March 20, 2025 • HKBU</p>
           </div>
         </div>
       </section>
@@ -89,33 +111,56 @@ export function HKBUIftar() {
             What is Iftar?
           </h2>
         </div>
-        <div className='w-full'>
-          <p className='text-xl text-green-950/70 leading-relaxed'>
-            Iftar is one of our most festive and memorable annual events where
-            we demonstrate the excellence of our Muslim community.
-            <span className='text-rose-400'>
-              {' '}
-              All students and broader community members are invited
-            </span>
-            : Muslims and non-Muslims, from on and off campus! Fasting is not
-            required. This is a wonderful opportunity to invite your non-Muslim
-            friends and coworkers to experience Ramadan alongside us and learn
-            about Islam. We will have programming, reflections, and delicious
-            food and dessert.
+        <div className='w-full flex flex-col gap-6'>
+          <p className='text-lg text-green-950/70 leading-relaxed'>
+            Iftar, the traditional breaking of the fast at sunset during the
+            holy month of Ramadan, represents a time of gratitude and community.
+          </p>
+
+          <p className='text-lg text-green-950/70 leading-relaxed'>
+            It is our most joyous annual celebration that showcases the vibrant
+            spirit of our Muslim community.{' '}
+            <span className='text-rose-400'>Everyone is warmly welcome</span>:
+            students and community members, Muslims and non-Muslims alike, from
+            both on and off campus! No need to be fasting to participate.
+          </p>
+
+          <p className='text-lg text-green-950/70 leading-relaxed'>
+            This gathering offers a perfect opportunity to bring your friends
+            and colleagues to share in the{' '}
+            <span className='text-rose-400'>Ramadan experience</span>, fostering
+            meaningful connections and cultural understanding.
+          </p>
+          <p className='text-lg text-green-950/70 leading-relaxed'>
+            Together, we'll{' '}
+            <span className='text-rose-400'>create memorable moments</span>{' '}
+            through engaging activities, heartfelt reflections, and a delicious
+            feast that celebrates our diverse community bonds.
+          </p>
+
+          <p className='text-lg text-green-950/70 leading-relaxed'>
+            This cherished tradition is generously supported by the{' '}
+            <span className='text-rose-400'>GES</span> (Global Engagement Squad)
+            at Hong Kong Baptist University, with dedicated assistance from our{' '}
+            <span className='text-rose-400'>volunteers</span> and the{' '}
+            <span className='text-rose-400'>wider community.</span>{' '}
           </p>
         </div>
         <div className='w-3/4 flex items-center justify-center'>
           <Carousel className='w-full max-w-xs'>
             <CarouselContent>
-              {Array.from({ length: 2 }).map((_, index) => (
+              {Array.from({ length: 9 }).map((_, index) => (
                 <CarouselItem key={index}>
                   <div className='p-1'>
                     <Image
-                      src={`/iftar/iftar-${index + 1}.png`}
-                      alt={`Iftar ${index}`}
+                      src={`/iftar-gallery/iftar-${index + 1}.webp`}
+                      alt={`Iftar ${index + 1}`}
                       width={800}
                       height={450}
                       className='rounded-md border border-2 border-rose-400/30'
+                      priority={index < 5}
+                      quality={index === 0 ? 100 : 60}
+                      loading={index < 5 ? 'eager' : 'lazy'}
                     />
                   </div>
                 </CarouselItem>
@@ -248,9 +293,11 @@ export function HKBUIftar() {
           </div>
 
           <div className='w-full space-y-2'>
-            <label className='text-green-950 text-sm font-medium'>Email</label>
+            <label className='text-green-950 text-sm font-medium'>
+              WhatsApp Number
+            </label>
             <Input
-              placeholder='Enter your email'
+              placeholder='Enter your WhatsApp Number'
               className='bg-white border border-black/10'
             />
           </div>
