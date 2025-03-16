@@ -229,8 +229,11 @@ export function HKBUIftar() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value='item-2'>
-              <AccordionTrigger className='text-green-950 text-xl font-medium'>
+            <AccordionItem
+              value='item-2'
+              className='border-b border-red-400/30'
+            >
+              <AccordionTrigger className='text-green-950 text-xl font-medium '>
                 Is food halal?
               </AccordionTrigger>
               <AccordionContent className='text-green-950/70'>
@@ -239,7 +242,10 @@ export function HKBUIftar() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value='item-3'>
+            <AccordionItem
+              value='item-3'
+              className='border-b border-red-400/30'
+            >
               <AccordionTrigger className='text-green-950 text-xl font-medium'>
                 I want to volunteer!
               </AccordionTrigger>
