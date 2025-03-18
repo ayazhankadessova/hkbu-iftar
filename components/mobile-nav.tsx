@@ -9,10 +9,17 @@ import {
 import { Button } from '@/components/ui/button'
 import { Menu } from 'lucide-react'
 import Link, { LinkProps } from 'next/link'
-import headerNavLinks from '@/config/headerNavLinks'
+import { dialogsInfo } from '@/config/headerNavLinks'
+import { helperDialogsInfo } from '@/config/headerNavLinks'
 import { cn } from '@/lib/utils'
 
-export default function MobileNav() {
+interface SiteHeaderProps {
+  useHelperDialogs?: boolean
+}
+
+export default function MobileNav({
+  useHelperDialogs = false,
+}: SiteHeaderProps) {
   const [open, setOpen] = useState(false)
   const [activeSection, setActiveSection] = useState<string>('')
   const navRef = useRef(null)
@@ -80,6 +87,8 @@ export default function MobileNav() {
     return clearAllBodyScrollLocks
   })
 
+  const navLinks = useHelperDialogs ? helperDialogsInfo : dialogsInfo
+
   return (
     <Sheet open={open} onOpenChange={onToggleNav}>
       <div className='flex items-center'>
@@ -90,7 +99,7 @@ export default function MobileNav() {
         </SheetTrigger>
         <SheetContent side='right'>
           <div className='flex flex-col gap-3 mt-3'>
-            {Object.values(headerNavLinks).map((dialog) => (
+            {Object.values(navLinks).map((dialog) => (
               <MobileLink
                 key={dialog.title}
                 onOpenChange={onToggleNav}
@@ -106,7 +115,7 @@ export default function MobileNav() {
                 {dialog.title}
               </MobileLink>
             ))}
-          </div> 
+          </div>
         </SheetContent>
       </div>
     </Sheet>

@@ -1,6 +1,6 @@
 import { DialogsInfo } from '@/types/app'
 
-const dialogsInfo: DialogsInfo = {
+export const dialogsInfo: DialogsInfo = {
   About: {
     title: 'About',
     href: '#about',
@@ -23,4 +23,15 @@ const dialogsInfo: DialogsInfo = {
   }
 }
 
-export default dialogsInfo
+export const helperDialogsInfo: DialogsInfo = {
+  FrontPage: {
+    title: 'Front Page',
+    href: '/',
+  },
+  Books: {
+    title: 'Books',
+    href: '#books',
+  },
+}
+
+// export default dialogsInfo

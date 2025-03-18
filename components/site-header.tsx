@@ -8,11 +8,16 @@ import {
   NavigationMenuLink,
 } from '@/components/ui/navigation-menu'
 import MobileNav from '@/components/mobile-nav'
-import headerNavLinks from '@/config/headerNavLinks'
+import { dialogsInfo } from '@/config/headerNavLinks'
+import { helperDialogsInfo } from '@/config/headerNavLinks'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 
-export function SiteHeader() {
+interface SiteHeaderProps {
+  useHelperDialogs?: boolean
+}
+
+export function SiteHeader({ useHelperDialogs = false }: SiteHeaderProps) {
   const [activeSection, setActiveSection] = useState<string>('')
 
   useEffect(() => {
@@ -72,10 +77,14 @@ export function SiteHeader() {
     return string.charAt(0).toUpperCase() + string.slice(1)
   }
 
+  const navLinks = useHelperDialogs ? helperDialogsInfo : dialogsInfo
+
   return (
     <header className='w-full px-8 md:px-10 lg:px-14 h-20 bg-white border-b border-rose-400/30 flex justify-between items-center sticky top-0 z-50'>
       <div className='flex items-center'>
-        <Image src='/logo.png' alt='Logo' width={85} height={50} />
+        <Link href="/">
+          <Image src='/logo.png' alt='Logo' width={85} height={50} />
+        </Link>
       </div>
 
       <div className='flex gap-6 items-center'>
@@ -92,7 +101,7 @@ export function SiteHeader() {
 
         <NavigationMenu className='hidden md:flex'>
           <NavigationMenuList className='gap-6'>
-            {Object.values(headerNavLinks).map((dialog) => (
+            {Object.values(navLinks).map((dialog) => (
               <NavigationMenuItem key={dialog.title}>
                 <Link href={dialog.href} legacyBehavior passHref>
                   <a
@@ -113,7 +122,7 @@ export function SiteHeader() {
           </NavigationMenuList>
         </NavigationMenu>
         <div className='md:hidden'>
-          <MobileNav />
+          <MobileNav useHelperDialogs={useHelperDialogs} />
         </div>
       </div>
     </header>

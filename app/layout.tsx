@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { Pinyon_Script, Ephesis } from 'next/font/google'
+import { SiteHeader } from '@/components/site-header'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
