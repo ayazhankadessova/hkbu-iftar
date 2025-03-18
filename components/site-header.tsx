@@ -82,7 +82,7 @@ export function SiteHeader({ useHelperDialogs = false }: SiteHeaderProps) {
   return (
     <header className='w-full px-8 md:px-10 lg:px-14 h-20 bg-white border-b border-rose-400/30 flex justify-between items-center sticky top-0 z-50'>
       <div className='flex items-center'>
-        <Link href="/">
+        <Link href='/'>
           <Image src='/logo.png' alt='Logo' width={85} height={50} />
         </Link>
       </div>
@@ -103,20 +103,29 @@ export function SiteHeader({ useHelperDialogs = false }: SiteHeaderProps) {
           <NavigationMenuList className='gap-6'>
             {Object.values(navLinks).map((dialog) => (
               <NavigationMenuItem key={dialog.title}>
-                <Link href={dialog.href} legacyBehavior passHref>
-                  <a
+                {dialog.href.startsWith('/') ? (
+                  <Link
                     href={dialog.href}
-                    onClick={(e) => scrollToSection(e, dialog.href)}
-                    className={cn(
-                      'text-sm font-medium transition-colors relative',
-                      activeSection === dialog.href.slice(1)
-                        ? 'text-primary font-bold after:content-[""] after:block after:h-0.5 after:bg-rose-400/90 after:absolute after:-bottom-1 after:left-0 after:right-0'
-                        : 'hover:text-rose-400/90 text-primary'
-                    )}
+                    className='text-sm font-medium transition-colors relative hover:text-rose-400/90 text-green-950'
                   >
                     {dialog.title}
-                  </a>
-                </Link>
+                  </Link>
+                ) : (
+                  <Link href={dialog.href} legacyBehavior passHref>
+                    <a
+                      href={dialog.href}
+                      onClick={(e) => scrollToSection(e, dialog.href)}
+                      className={cn(
+                        'text-sm font-medium transition-colors relative',
+                        activeSection === dialog.href.slice(1)
+                          ? 'text-green-950 font-bold after:content-[""] after:block after:h-0.5 after:bg-rose-400/90 after:absolute after:-bottom-1 after:left-0 after:right-0'
+                          : 'hover:text-rose-400/90 text-green-950'
+                      )}
+                    >
+                      {dialog.title}
+                    </a>
+                  </Link>
+                )}
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
