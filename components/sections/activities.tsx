@@ -14,7 +14,13 @@ import {
 } from '@/components/ui/alert-dialog'
 import { Maximize2, X } from 'lucide-react'
 
-function ActivityItem({ id, title, description, link, href }: ActivityItemProps) {
+function ActivityItem({
+  id,
+  title,
+  description,
+  link,
+  href,
+}: ActivityItemProps) {
   return (
     <div className='w-full flex items-center gap-4 py-5 border-b border-rose-400/30'>
       <AlertDialog>
@@ -34,17 +40,17 @@ function ActivityItem({ id, title, description, link, href }: ActivityItemProps)
             </div>
           </div>
         </AlertDialogTrigger>
-        <AlertDialogContent className='sm:max-w-[50vw] md:max-w-[60vw] lg:max-w-[40vw]'>
+        <AlertDialogContent className='max-w-[70vw] sm:max-w-[65vw] md:max-w-[60vw] lg:max-w-[40vw] rounded-md'>
           <AlertDialogHeader className='p-0'>
             <div className='relative'>
               <Image
                 src={`/activities/${id}.png`}
                 alt='Activity'
-                width={700}
-                height={500}
+                width={800}
+                height={600}
                 className='w-full h-auto rounded-lg'
               />
-              <AlertDialogCancel className='absolute top-4 right-4 rounded-full w-4 h-4 p-3 bg-rose-400/70 hover:bg-rose-400/90 border-2 border-black/5'>
+              <AlertDialogCancel className='absolute top-1 right-2 rounded-full w-4 h-4 p-3 bg-rose-400/70 hover:bg-rose-400/90 border-2 border-black/5'>
                 <X className='h-4 w-4 text-green-950' />
               </AlertDialogCancel>
             </div>
@@ -61,7 +67,7 @@ function ActivityItem({ id, title, description, link, href }: ActivityItemProps)
               {title}{' '}
               {link && (
                 <span className='text-sm font-semibold inline-block transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-0.5'>
-                  <i className='fa-regular fa-arrow-up-right-from-square'></i>
+                  ↗
                 </span>
               )}
             </h3>
