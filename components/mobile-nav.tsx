@@ -73,6 +73,10 @@ export default function MobileNav({
   }
 
   const scrollToSection = (href: string) => {
+    if (typeof href === 'string' && href.startsWith('/')) {
+      window.location.href = href
+      return
+    }
     const element = document.querySelector(href)
     if (element) {
       const offsetTop = element.getBoundingClientRect().top + window.pageYOffset
@@ -142,8 +146,12 @@ function MobileLink({
       href={href}
       onClick={(e) => {
         e.preventDefault()
-        onClick?.()
-        onOpenChange?.(false)
+        if (typeof href === 'string' && href.startsWith('/')) {
+          window.location.href = href
+        } else {
+          onClick?.()
+          onOpenChange?.(false)
+        }
       }}
       className={className}
       {...props}
