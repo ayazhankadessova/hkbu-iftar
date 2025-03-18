@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -11,54 +11,11 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { Separator } from '@/components/ui/separator'
-import Image from 'next/image'
 import { Schedule } from '@/components/sections/scheduele'
-import { Hero } from '@/components/sections//hero'
+import { Hero } from '@/components/sections/hero'
 import { About } from '@/components/sections/about'
+import { Activities } from '@/components/sections/activities'
 import { SiteHeader } from '@/components/site-header'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel'
-import Link from 'next/link' 
-
-// Activity Item Component
-interface ActivityItemProps {
-  title: string
-  description: string
-  time: string
-}
-
-function ActivityItem({ title, description }: ActivityItemProps) {
-  return (
-    <div className='w-full flex items-center gap-4 py-5 border-b border-rose-400/30'>
-      <div className='w-24 h-24 bg-zinc-300/50 rounded-md flex items-center justify-center'>
-        <Image
-          src='https://picsum.photos/200'
-          alt='Activity'
-          width={200}
-          height={200}
-          className='w-full h-full object-cover rounded-md'
-        />
-      </div>
-      <div className='flex-1 space-y-2'>
-        <Link href={'/public'} className='block group'>
-          <h3 className='text-green-950 text-xl font-medium'>
-            {title} <i className='fas fa-arrow-up-right'></i>
-            {/* <i className='fa-solid fa-arrow-up-right'></i> */}
-            <span className='text-sm font-semibold inline-block transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-0.5'>
-              <i className='fa-regular  fa-arrow-up-right-from-square'></i>{' '}
-            </span>
-          </h3>
-        </Link>
-        <p className='text-green-950/70'>{description}</p>
-      </div>
-    </div>
-  )
-}
 
 export function HKBUIftar() {
 
@@ -76,35 +33,7 @@ export function HKBUIftar() {
 
       <Schedule />
 
-      {/* Activities Section */}
-      <section
-        id='activities'
-        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-[url(/green-bg.png)] bg-cover bg-center flex flex-col justify-center items-center gap-10'
-      >
-        <div className='w-full flex flex-col justify-start items-center gap-6'>
-          <h2 className='text-yellow-600 text-5xl font-pinyon font-bold text-center max-w-lg'>
-            Activities
-          </h2>
-        </div>
-
-        <div className='w-full space-y-8 py-5'>
-          <ActivityItem
-            title='Sharing'
-            description='lorem ipsumlorem ipsumlorem ipsumlorem ipsum.'
-            time='6:30 PM'
-          />
-          <ActivityItem
-            title='Kahoot'
-            description='lorem ipsumlorem ipsumlorem ipsumlorem ipsum.'
-            time='6:30 PM'
-          />
-          <ActivityItem
-            title='Lucky draw'
-            description='lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum'
-            time='6:30 PM'
-          />
-        </div>
-      </section>
+      <Activities />
 
       {/* FAQ Section */}
       <section
