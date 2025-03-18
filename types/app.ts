@@ -6,3 +6,9 @@ interface DialogInfo {
 export interface DialogsInfo {
   [key: string]: DialogInfo
 }
+
+export interface HeroProps {
+  title: string
+  subtitle: string
+  date: string
+}

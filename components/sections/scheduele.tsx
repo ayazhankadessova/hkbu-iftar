@@ -20,7 +20,7 @@ function ScheduleItem({ icon, title, time }: ScheduleItemType) {
   )
 }
 
-export function ScheduleSection() {
+export function Schedule() {
   return (
     <section
       id='schedule'

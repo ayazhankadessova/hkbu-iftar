@@ -12,7 +12,8 @@ import {
 } from '@/components/ui/accordion'
 import { Separator } from '@/components/ui/separator'
 import Image from 'next/image'
-import { ScheduleSection } from '@/components/sections/scheduele-section'
+import { Schedule } from '@/components/sections/scheduele'
+import { Hero } from '@/components/sections//hero'
 import { SiteHeader } from '@/components/site-header'
 import {
   Carousel,
@@ -21,7 +22,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import Link from 'next/link'
+import Link from 'next/link' 
 
 // Activity Item Component
 interface ActivityItemProps {
@@ -60,46 +61,15 @@ function ActivityItem({ title, description }: ActivityItemProps) {
 
 export function HKBUIftar() {
 
-   useEffect(() => {
-     const imageUrls = Array.from({ length: 9 }).map(
-       (_, index) => `/iftar-gallery/iftar-${index + 1}.webp`
-     )
-     imageUrls.forEach((url) => {
-       const img = new window.Image()
-       img.src = url
-     })
-   }, [])
-
   return (
     <div className='min-h-screen flex flex-col'>
       <SiteHeader />
 
-      {/* Hero Section */}
-      <section
-        id='top'
-        className='w-full px-8 md:px-20 lg:px-40 py-14 bg-[url(/green-bg.png)] bg-cover bg-center flex flex-col md:flex-row justify-center items-center gap-10'
-      >
-        <div className='w-3/4 md:w-1/2 flex justify-center md:justify-start items-center'>
-          <Image
-            src='/main-pic-2.webp'
-            width={400}
-            height={225}
-            alt='2024 iftar'
-            className='rounded-md border border-2 border-rose-400/30'
-          />
-        </div>
-        <div className='flex-1 flex flex-col justify-center items-center text-center gap-6'>
-          <h1 className='text-yellow-500 text-7xl font-pinyon font-bold'>
-            Annual Iftar
-          </h1>
-          <div className='gap-2 flex flex-col'>
-            <h3 className='text-green-950 text-xl'>
-              Join us to celebrate Ramadan!
-            </h3>
-            <p className='text-green-950 text-sm'>March 20, 2025 • HKBU</p>
-          </div>
-        </div>
-      </section>
+      <Hero
+        title={'Annual Iftar'}
+        subtitle={'Join us to celebrate Ramadan!'}
+        date={'March 20, 2025 • HKBU'}
+      />
 
       {/* About Section */}
       <section
@@ -160,7 +130,7 @@ export function HKBUIftar() {
                       className='rounded-md border border-2 border-rose-400/30'
                       priority={index < 10}
                       quality={index === 0 ? 100 : 60}
-                      loading={index < 5 ? 'eager' : 'lazy'}
+                      loading={index < 10 ? 'eager' : 'lazy'}
                     />
                   </div>
                 </CarouselItem>
@@ -172,7 +142,7 @@ export function HKBUIftar() {
         </div>
       </section>
 
-      <ScheduleSection />
+      <Schedule />
 
       {/* Activities Section */}
       <section
