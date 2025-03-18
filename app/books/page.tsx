@@ -21,8 +21,7 @@ const books: Book[] = [
     title: 'Islam: A Very Short Introduction',
     author: 'Malise Ruthven',
     publisher: 'Oxford University Press',
-    description:
-      'A concise and informative introduction to Islam, covering its history, beliefs, practices, and modern interpretations.',
+    description: `The book provides essential clarifications and insights in to the big issues, including the major divisions between movements such as the Shi'is, the Sunnis, and the Wahhabis, and the Central importance of Shari'a (Islamic law) in Islamic life.`,
     genre: 'Religion, Non-fiction',
     imageUrl: '/books/islam-intro.jpg', // Make sure to add these images to your public folder
   },
@@ -31,7 +30,7 @@ const books: Book[] = [
     title: 'The Heart of the Quran: Commentary of Surah Yasin',
     author: 'Asim Khan',
     description:
-      'An insightful commentary on Surah Yasin, one of the most revered chapters of the Quran, explaining its profound meanings and lessons.',
+      'A well-researched commentary on Surah Yasin, complete with diagrams and illustrations. The commentary highlights the nuances of Quranic language and draws the attention of readers towards practical changes they can make in their lives.',
     genre: 'Religious Commentary',
     imageUrl: '/books/the-heart-of-quran.webp',
   },
@@ -40,8 +39,9 @@ const books: Book[] = [
     title: 'Muhammad: A Very Short Introduction',
     author: 'Jonathan A.C. Brown',
     publisher: 'Oxford University Press',
-    description:
-      'A concise biography of Prophet Muhammad, exploring his life, teachings, and lasting impact on world history.',
+    description: `A concise biography of Prophet Muhammad, exploring his life, teachings, and lasting impact on world history.
+      
+      "This is an excellent introduction to the life of Muhammad. Jonathan Brown is providing the reader with a rigorous study based on the classical Islamic tradition, yet well balanced between elements of faith and rational discussions, useful for Muslims and non-Muslims alike. Very easy to read, profound, and interesting to study." - Tariq Ramadan, Professor of Contemporary Islamic Studies, Oxford.`,
     genre: 'Biography, Religion',
     imageUrl: '/books/muhammad-saw-intro.jpg',
   },
@@ -49,17 +49,16 @@ const books: Book[] = [
     id: 4,
     title: 'The Productive Muslim',
     author: 'Mohammad Fares',
-    description:
-      'A practical guide that combines Islamic teachings with modern productivity strategies to help Muslims lead balanced, productive lives.',
+    description: `In this work, Mohammed Faris, the founder of ProductiveMuslim.com, provides a practical framework that helps urban global Muslims lead a productive lifestyle spiritually, physically and socially. `,
     genre: 'Self-help, Spirituality',
-    imageUrl: '/books/productive-Muslim.webp',
+    imageUrl: '/books/muslim-productivity.jpg',
   },
   {
     id: 5,
     title: 'Islamic Finance',
     author: 'Muhammad Elbruz, Maxence Clairmidi',
     description:
-      'An introduction to Islamic financial principles and practices, explaining how they differ from conventional finance systems.',
+      'Dive into the principles and prohibitions of Islamic finance through this richly knowledgeable and analytical work. The authors offer an in-depth exploration of lawful and unlawful operations, providing a unique perspective on finance in accordance with the ethical principles of Islam.',
     genre: 'Finance, Business',
     imageUrl: '/books/islamic-finance.jpg',
   },
@@ -68,8 +67,8 @@ const books: Book[] = [
     title: 'As Long as the Lemon Trees Grow',
     author: 'Zoulfa Katouh',
     description:
-      'A moving novel set during the Syrian revolution, exploring themes of courage, resilience, and hope amid conflict.',
-    genre: 'Fiction, Young Adult',
+      'A love letter to Syria and its people, As Long as the Lemon Trees Grow is a speculative novel set amid the Syrian Revolution, burning with the fires of hope, love, and possibility.',
+    genre: 'Historical Fiction, Young Adult',
     imageUrl: '/books/lemon-trees-grow.webp',
   },
 ]
@@ -77,7 +76,7 @@ const books: Book[] = [
 export default function BooksPage() {
   return (
     <div className='min-h-screen bg-zinc-50'>
-      <SiteHeader useHelperDialogs={true}/>
+      <SiteHeader useHelperDialogs={true} />
 
       <section
         id='books'
@@ -133,7 +132,7 @@ export default function BooksPage() {
                     )}
                   </div>
 
-                  <p className='text-green-950/70 mb-4 text-md'>
+                  <p className='text-green-950/70 mb-4 text-md whitespace-pre-line'>
                     {book.description}
                   </p>
 
