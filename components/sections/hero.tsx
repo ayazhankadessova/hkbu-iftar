@@ -1,9 +1,8 @@
-// File: components/ScheduleSection.tsx (modified to use external data)
 import React from 'react'
 import Image from 'next/image'
 import { HeroProps } from '@/types/app'
 
-export function Hero({ title, subtitle, date }: HeroProps) {
+export function Hero({ title, subtitle, date }: Readonly<HeroProps>) {
   return (
     <section
       id='top'
