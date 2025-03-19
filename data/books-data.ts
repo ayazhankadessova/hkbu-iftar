@@ -18,7 +18,7 @@ export const books: Book[] = [
     publisher: 'Oxford University Press',
     description: `The book provides essential clarifications and insights in to the big issues, including the major divisions between movements such as the Shi'is, the Sunnis, and the Wahhabis, and the Central importance of Shari'a (Islamic law) in Islamic life.`,
     genre: 'Religion, Non-fiction',
-    imageUrl: '/books/islam-intro.jpg', // Make sure to add these images to your public folder
+    imageUrl: '/books/islam-intro.png', // Make sure to add these images to your public folder
   },
   {
     id: 2,
@@ -34,11 +34,9 @@ export const books: Book[] = [
     title: 'Muhammad: A Very Short Introduction',
     author: 'Jonathan A.C. Brown',
     publisher: 'Oxford University Press',
-    description: `A concise biography of Prophet Muhammad, exploring his life, teachings, and lasting impact on world history.
-      
-      "This is an excellent introduction to the life of Muhammad. Jonathan Brown is providing the reader with a rigorous study based on the classical Islamic tradition, yet well balanced between elements of faith and rational discussions, useful for Muslims and non-Muslims alike. Very easy to read, profound, and interesting to study." - Tariq Ramadan, Professor of Contemporary Islamic Studies, Oxford.`,
+    description: `"This is an excellent introduction to the life of Muhammad (s.a.w). Jonathan Brown is providing the reader with a rigorous study based on the classical Islamic tradition, yet well balanced between elements of faith and rational discussions, useful for Muslims and non-Muslims alike. Very easy to read, profound, and interesting to study." - Tariq Ramadan, Professor of Contemporary Islamic Studies, Oxford.`,
     genre: 'Biography, Religion',
-    imageUrl: '/books/muhammad-saw-intro.jpg',
+    imageUrl: '/books/muhammad-saw-intro-2.png',
   },
   {
     id: 4,
@@ -64,6 +62,6 @@ export const books: Book[] = [
     description:
       'A love letter to Syria and its people, As Long as the Lemon Trees Grow is a speculative novel set amid the Syrian Revolution, burning with the fires of hope, love, and possibility.',
     genre: 'Historical Fiction, Young Adult',
-    imageUrl: '/books/lemon-trees-grow.webp',
+    imageUrl: '/books/lemon-trees-grow.png',
   },
 ]

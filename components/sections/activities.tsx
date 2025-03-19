@@ -74,12 +74,7 @@ function ActivityItem({
           </Link>
         ) : (
           <h3 className='text-green-950 text-xl font-medium'>
-            {title}{' '}
-            {link && (
-              <span className='text-sm font-semibold inline-block transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-0.5'>
-                <i className='fa-regular fa-arrow-up-right-from-square'></i>
-              </span>
-            )}
+            {title}
           </h3>
         )}
 

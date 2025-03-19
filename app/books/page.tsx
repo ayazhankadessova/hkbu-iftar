@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { SiteHeader } from '@/components/site-header'
 import { books } from '@/data/books-data'
+import { Badge } from '@/components/ui/badge'
 
 export default function BooksPage() {
   return (
@@ -48,11 +49,11 @@ export default function BooksPage() {
 
                 {/* Book details */}
                 <div className='p-6 md:w-3/4'>
-                  <h2 className='text-xl md:text-xl font-semibold text-green-950 mb-2'>
+                  <h2 className='text-xl md:text-xl font-medium text-green-950 mb-2'>
                     {book.title}
                   </h2>
 
-                  <div className='flex flex-wrap gap-2 mb-3 text-sm'>
+                  <div className='flex flex-wrap gap-2 mb-3 text-xs'>
                     <span className='text-green-950/70'>
                       By <span className='italic'>{book.author}</span>
                     </span>
@@ -63,14 +64,16 @@ export default function BooksPage() {
                     )}
                   </div>
 
-                  <p className='text-green-950/70 mb-4 text-md whitespace-pre-line'>
+                  <p className='text-green-950/70 mb-4 text-sm whitespace-pre-line'>
                     {book.description}
                   </p>
 
                   <div className='mt-auto'>
-                    <span className='inline-block bg-yellow-500/30 text-green-950 text-xs px-3 py-1 rounded-full'>
-                      {book.genre}
-                    </span>
+                    {book.genre.split(', ').map((genre, index) => (
+                      <Badge key={index} className='mr-2'>
+                        {genre}
+                      </Badge>
+                    ))}
                   </div>
                 </div>
               </div>
