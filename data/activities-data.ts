@@ -26,7 +26,7 @@ export const activitiesData: ActivityItemProps[] = [
     id: 'sharing',
     title: 'Sharing',
     description:
-      'Participate in our sharing session where everyone can express what they love about Ramadan. You can also share surah from the Quran that inspires you, a book/podcast/whatever, feedback on the event, it is quite open-ended!',
+      'Participate in our sharing session where everyone can express what they love about Ramadan. You can also share surah from the Quran that inspires you, a book or a podcast, feedback on the event, it is quite open-ended!',
     link: false,
   },
 ]
