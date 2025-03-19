@@ -41,6 +41,7 @@ export default function BooksPage() {
                         fill
                         className='object-cover'
                         sizes='(max-width: 768px) 100vw, 25vw'
+                        loading={'eager'}
                       />
                     ) : (
                       <span className='text-zinc-400 text-sm'>Book Cover</span>
