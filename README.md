@@ -1,4 +1,9 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+<img width="600" alt="Screenshot 2025-03-19 at 1 45 19 PM" src="https://github.com/user-attachments/assets/b6483e0a-aef5-4122-9fb9-de4e50cbd762" />
+<img width="600" alt="Screenshot 2025-03-19 at 1 46 05 PM" src="https://github.com/user-attachments/assets/f21912ed-0e5d-4474-9f77-4992b0e9f055" />
+
+Figma Wireframe: https://www.figma.com/community/file/1484061008344317786
+
 
 ## Getting Started
 
