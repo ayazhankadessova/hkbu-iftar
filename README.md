@@ -39,7 +39,7 @@ Figma Wireframe: https://www.figma.com/community/file/1484061008344317786
 The chosen color palette aims to create a warm and inviting atmosphere for the Iftar website. Together, this palette conveys a message of community, celebration, and spiritual reflection during Ramadan.
 
 <img width="600" alt="Screenshot 2025-03-19 at 1 45 19 PM" src="https://github.com/user-attachments/assets/b6483e0a-aef5-4122-9fb9-de4e50cbd762" />
-<img width="600" alt="Screenshot 2025-03-19 at 1 46 05 PM" src="https://github.com/user-attachments/assets/f21912ed-0e5d-4474-9f77-4992b0e9f055" />
+<img width="600" alt="Screenshot 2025-03-19 at 2 08 00 PM" src="https://github.com/user-attachments/assets/a59621f6-485c-4b4f-a088-7f75b06e1807" />
 
 - ![#F3F0BC](https://placehold.co/15x15/F3F0BC/F3F0BC.png) `#F3F0BC`
 
