@@ -12,7 +12,7 @@ import {
   AlertDialogHeader,
   AlertDialogFooter,
 } from '@/components/ui/alert-dialog'
-import { Maximize2, X } from 'lucide-react'
+import { Maximize2, X, ArrowUpRight } from 'lucide-react'
 
 function ActivityItem({
   id,
@@ -67,7 +67,7 @@ function ActivityItem({
               {title}{' '}
               {link && (
                 <span className='text-sm font-semibold inline-block transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-0.5'>
-                  ↗
+                  <ArrowUpRight className='w-4 h-4 text-green-950' />
                 </span>
               )}
             </h3>

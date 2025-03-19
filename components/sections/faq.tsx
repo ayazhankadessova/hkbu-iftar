@@ -5,72 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-
-const faqQuestions = [
-  {
-    id: 'item-1',
-    question: 'I am not fasting. Can I attend?',
-    answer: 'Yes, this event is open to all HKBU students and staff.',
-  },
-  {
-    id: 'item-2',
-    question: 'It is my first iftar. What should I know before?',
-    answer: (
-      <>
-        We will have a presentation before dinner where you can learn about
-        Ramadan. If you want to read something beforehand, check out this{' '}
-        <a
-          href='https://www.thekitchn.com/what-you-should-know-before-attending-your-first-iftar-245656'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='text-green-950/70 hover:text-red-300 transition-colors underline underline-offset-2 underline-thickness-1'
-        >
-          article
-        </a>{' '}
-        and surf the internet.
-      </>
-    ),
-  },
-  {
-    id: 'item-3',
-    question: 'Is food halal?',
-    answer:
-      'All the food has been ordered from halal certified restaurants and snacks are halal, too.',
-  },
-  {
-    id: 'item-4',
-    question: 'What is the dress code?',
-    answer:
-      'Casual clothing is welcome, but please dress modestly to respect the occasion. Avoid tight or revealing outfits, as modesty is important during this religious rite of Ramadan.',
-  },
-  {
-    id: 'item-5',
-    question: 'I want to volunteer!',
-    answer: (
-      <>
-        Send us an{' '}
-        <a
-          href='mailto:kadessovaayazhan@gmail.com'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='text-green-950/70 hover:text-red-300 transition-colors underline underline-offset-2 underline-thickness-1'
-        >
-          email
-        </a>{' '}
-        or text us on{' '}
-        <a
-          href='https://wa.me/+77778502000'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='hover:text-red-300 transition-transform transform hover:scale-125 underline underline-offset-2 underline-thickness-1'
-        >
-          WhatsApp
-        </a>
-        .
-      </>
-    ),
-  },
-]
+import { faqQuestions } from '@/data/faq-data'
 
 export function FAQ() {
   return (
