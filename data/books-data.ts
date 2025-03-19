@@ -1,4 +1,3 @@
-// Define the Book type
 interface Book {
   id: number
   title: string
@@ -9,7 +8,6 @@ interface Book {
   imageUrl: string
 }
 
-// Array of books
 export const books: Book[] = [
   {
     id: 1,
@@ -18,7 +16,7 @@ export const books: Book[] = [
     publisher: 'Oxford University Press',
     description: `The book provides essential clarifications and insights in to the big issues, including the major divisions between movements such as the Shi'is, the Sunnis, and the Wahhabis, and the Central importance of Shari'a (Islamic law) in Islamic life.`,
     genre: 'Religion, Non-fiction',
-    imageUrl: '/books/islam-intro.png', // Make sure to add these images to your public folder
+    imageUrl: '/books/islam-intro.png', 
   },
   {
     id: 2,

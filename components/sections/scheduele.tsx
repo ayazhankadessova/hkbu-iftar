@@ -1,11 +1,9 @@
-// File: components/ScheduleSection.tsx (modified to use external data)
 import React from 'react'
 import {
   scheduleData,
   ScheduleItem as ScheduleItemType,
 } from '@/data/schedueleData'
 
-// Schedule Item Component
 function ScheduleItem({ icon, title, time }: ScheduleItemType) {
   return (
     <div className='w-full flex items-center gap-4 py-5 border-b border-rose-400/30'>

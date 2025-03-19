@@ -1,4 +1,3 @@
-// File: components/feature-card.tsx
 import { Card, CardContent } from '@/components/ui/card'
 import Link from 'next/link'
 import { ReactNode } from 'react'

@@ -1,4 +1,3 @@
-// data/scheduleData.ts
 export interface ScheduleItem {
   icon: string
   title: string

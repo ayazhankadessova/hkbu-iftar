@@ -1,4 +1,3 @@
-// Activity Item Component
 export interface ActivityItemProps {
   id: string 
   title: string
