@@ -37,6 +37,7 @@ export default function BooksPage() {
                       <Image
                         src={book.imageUrl}
                         alt={book.title}
+                        priority={true}
                         fill
                         className='object-cover'
                         sizes='(max-width: 768px) 100vw, 25vw'
