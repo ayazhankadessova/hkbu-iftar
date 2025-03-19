@@ -97,7 +97,7 @@ export const faqQuestions: FAQItem[] = [
           WhatsApp
         </a>
         , or simply come to AAB 3rd floor at 4.30pm on the day of the event to
-        help set up the tables, food, and decoations.
+        help set up the tables, food, and decorations.
       </>
     ),
   },
