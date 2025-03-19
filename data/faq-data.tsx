@@ -21,7 +21,7 @@ export const faqQuestions: FAQItem[] = [
         We will have a presentation before dinner where you can learn about
         Ramadan. If you want to check something beforehand, watch this{' '}
         <a
-          href='https://www.scmp.com/yp/learn/learning-resources/listening/article/3255053/5-minute-listening-what-ramadan-and-how-do-muslims-spend-holy-month'
+          href='https://www.youtube.com/watch?v=NiHYmSwPLks'
           target='_blank'
           rel='noopener noreferrer'
           className='text-green-950/70 hover:text-red-300 transition-colors underline underline-offset-2 underline-thickness-1'
@@ -63,7 +63,7 @@ export const faqQuestions: FAQItem[] = [
       <>
         We are planning to use the area behind the stage to provide a prayer
         space, separate for men and women. Please bring your own prayer mat if
-        you have one. If you prefer a quiet place, you can use the room in {' '}
+        you have one. If you prefer a quiet place, you can use the room in{' '}
         <a
           href='https://sa.hkbu.edu.hk/en/cla/student-amenities-and-welfare/quiet-rooms.html'
           target='_blank'
@@ -71,7 +71,8 @@ export const faqQuestions: FAQItem[] = [
           className='text-green-950/70 hover:text-red-300 transition-colors underline underline-offset-2 underline-thickness-1'
         >
           DLB705
-        </a>{' '} for your prayer.
+        </a>{' '}
+        for your prayer.
       </>
     ),
   },
@@ -94,7 +95,9 @@ export const faqQuestions: FAQItem[] = [
           className='hover:text-red-300 transition-transform transform hover:scale-125 underline underline-offset-2 underline-thickness-1'
         >
           WhatsApp
-        </a>, or simply come to AAB 3rd floor at 4.30pm on the day of the event to help set up the tables, food, and decoations.
+        </a>
+        , or simply come to AAB 3rd floor at 4.30pm on the day of the event to
+        help set up the tables, food, and decoations.
       </>
     ),
   },
