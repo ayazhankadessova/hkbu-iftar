@@ -2,76 +2,8 @@
 import React from 'react'
 import Image from 'next/image'
 import { SiteHeader } from '@/components/site-header'
-
-// Define the Book type
-interface Book {
-  id: number
-  title: string
-  author: string
-  publisher?: string
-  description: string
-  genre: string
-  imageUrl: string
-}
-
-// Array of books
-const books: Book[] = [
-  {
-    id: 1,
-    title: 'Islam: A Very Short Introduction',
-    author: 'Malise Ruthven',
-    publisher: 'Oxford University Press',
-    description: `The book provides essential clarifications and insights in to the big issues, including the major divisions between movements such as the Shi'is, the Sunnis, and the Wahhabis, and the Central importance of Shari'a (Islamic law) in Islamic life.`,
-    genre: 'Religion, Non-fiction',
-    imageUrl: '/books/islam-intro.jpg', // Make sure to add these images to your public folder
-  },
-  {
-    id: 2,
-    title: 'The Heart of the Quran: Commentary of Surah Yasin',
-    author: 'Asim Khan',
-    description:
-      'A well-researched commentary on Surah Yasin, complete with diagrams and illustrations. The commentary highlights the nuances of Quranic language and draws the attention of readers towards practical changes they can make in their lives.',
-    genre: 'Religious Commentary',
-    imageUrl: '/books/the-heart-of-quran.webp',
-  },
-  {
-    id: 3,
-    title: 'Muhammad: A Very Short Introduction',
-    author: 'Jonathan A.C. Brown',
-    publisher: 'Oxford University Press',
-    description: `A concise biography of Prophet Muhammad, exploring his life, teachings, and lasting impact on world history.
-      
-      "This is an excellent introduction to the life of Muhammad. Jonathan Brown is providing the reader with a rigorous study based on the classical Islamic tradition, yet well balanced between elements of faith and rational discussions, useful for Muslims and non-Muslims alike. Very easy to read, profound, and interesting to study." - Tariq Ramadan, Professor of Contemporary Islamic Studies, Oxford.`,
-    genre: 'Biography, Religion',
-    imageUrl: '/books/muhammad-saw-intro.jpg',
-  },
-  {
-    id: 4,
-    title: 'The Productive Muslim',
-    author: 'Mohammad Fares',
-    description: `In this work, Mohammed Faris, the founder of ProductiveMuslim.com, provides a practical framework that helps urban global Muslims lead a productive lifestyle spiritually, physically and socially. `,
-    genre: 'Self-help, Spirituality',
-    imageUrl: '/books/muslim-productivity.jpg',
-  },
-  {
-    id: 5,
-    title: 'Islamic Finance',
-    author: 'Muhammad Elbruz, Maxence Clairmidi',
-    description:
-      'Dive into the principles and prohibitions of Islamic finance through this richly knowledgeable and analytical work. The authors offer an in-depth exploration of lawful and unlawful operations, providing a unique perspective on finance in accordance with the ethical principles of Islam.',
-    genre: 'Finance, Business',
-    imageUrl: '/books/islamic-finance.jpg',
-  },
-  {
-    id: 6,
-    title: 'As Long as the Lemon Trees Grow',
-    author: 'Zoulfa Katouh',
-    description:
-      'A love letter to Syria and its people, As Long as the Lemon Trees Grow is a speculative novel set amid the Syrian Revolution, burning with the fires of hope, love, and possibility.',
-    genre: 'Historical Fiction, Young Adult',
-    imageUrl: '/books/lemon-trees-grow.webp',
-  },
-]
+import { books } from '@/data/books-data'
+import { Badge } from '@/components/ui/badge'
 
 export default function BooksPage() {
   return (
@@ -105,9 +37,11 @@ export default function BooksPage() {
                       <Image
                         src={book.imageUrl}
                         alt={book.title}
+                        priority={true}
                         fill
                         className='object-cover'
                         sizes='(max-width: 768px) 100vw, 25vw'
+                        loading={'eager'}
                       />
                     ) : (
                       <span className='text-zinc-400 text-sm'>Book Cover</span>
@@ -117,11 +51,11 @@ export default function BooksPage() {
 
                 {/* Book details */}
                 <div className='p-6 md:w-3/4'>
-                  <h2 className='text-xl md:text-xl font-semibold text-green-950 mb-2'>
+                  <h2 className='text-xl md:text-xl font-medium text-green-950 mb-2'>
                     {book.title}
                   </h2>
 
-                  <div className='flex flex-wrap gap-2 mb-3 text-sm'>
+                  <div className='flex flex-wrap gap-2 mb-3 text-xs'>
                     <span className='text-green-950/70'>
                       By <span className='italic'>{book.author}</span>
                     </span>
@@ -132,14 +66,16 @@ export default function BooksPage() {
                     )}
                   </div>
 
-                  <p className='text-green-950/70 mb-4 text-md whitespace-pre-line'>
+                  <p className='text-green-950/70 mb-4 text-sm whitespace-pre-line'>
                     {book.description}
                   </p>
 
                   <div className='mt-auto'>
-                    <span className='inline-block bg-yellow-500/30 text-green-950 text-xs px-3 py-1 rounded-full'>
-                      {book.genre}
-                    </span>
+                    {book.genre.split(', ').map((genre, index) => (
+                      <Badge key={index} className='mr-2'>
+                        {genre}
+                      </Badge>
+                    ))}
                   </div>
                 </div>
               </div>
