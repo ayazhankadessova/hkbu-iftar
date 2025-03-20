@@ -8,11 +8,11 @@ export function Hero({ title, subtitle, date }: Readonly<HeroProps>) {
       id='top'
       className='w-full px-8 md:px-20 lg:px-40 py-14 bg-[url(/green-bg.png)] bg-cover bg-center flex flex-col md:flex-row justify-center items-center gap-10'
     >
-      <div className='flex-1 flex flex-col gap-6'>
+      <div className='flex-1 flex flex-col gap-6 text-center md:text-left'>
         <h1 className='text-yellow-600 text-7xl font-pinyon font-semibold'>
           {title}
         </h1>
-        <div className='gap-2 flex flex-col sm:text-center md:text-left'>
+        <div className='gap-2 flex flex-col text-center md:text-left'>
           <h3 className='text-green-950 text-xl'>{subtitle}</h3>
           <p className='text-green-950 text-sm'>{date}</p>
         </div>
