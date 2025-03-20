@@ -13,7 +13,7 @@ export default function BooksPage() {
         id='books'
         className='w-full px-8 md:px-20 lg:px-40 py-14 bg-[url(/green-bg.png)] bg-cover bg-center flex flex-col justify-center items-center'
       >
-        <h1 className='text-4xl md:text-5xl font-pinyon text-yellow-600 text-center mb-8'>
+        <h1 className='font-bold text-4xl md:text-5xl font-pinyon text-yellow-600 text-center mb-8'>
           Lucky Draw Books
         </h1>
         <p className='text-green-950/70 text-center max-w-2xl mx-auto mb-12'>

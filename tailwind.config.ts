@@ -12,13 +12,11 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        // Add a custom font family named 'inconsolata'
-        inconsolata: ['var(--font-inconsolata)', 'monospace'],
         // Optionally, you can also set it as the default sans font
-        sans: ['var(--font-inconsolata)', ...fontFamily.sans],
+        sans: ['var(--font-montserrat)', ...fontFamily.sans],
         // Add a specific class for when you want to use Pinyon Script selectively
         pinyon: ['var(--font-pinyon-script)', 'cursive'],
-        ephesis: ['var(--font-ephesis)', 'cursive'],
+        // ephesis: ['var(--font-ephesis)', 'cursive'],
       },
       colors: {
         background: 'hsl(var(--background))',

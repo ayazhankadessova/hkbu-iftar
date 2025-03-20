@@ -9,9 +9,9 @@ export function Feedback() {
       className='w-full px-8 md:px-20 lg:px-40 py-14 bg-white flex flex-col md:flex-row justify-center items-start gap-10'
     >
       <div className='flex-1 flex flex-col justify-start items-start gap-6'>
-        <h2 className='text-yellow-600 text-5xl font-pinyon font-bold leading-tight'>
+        <h1 className='text-yellow-600 text-5xl font-pinyon font-bold leading-tight'>
           Feedback Form
-        </h2>
+        </h1>
         <p className='text-green-950'>
           Share your thoughts and suggestions with us.
         </p>

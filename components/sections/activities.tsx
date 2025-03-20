@@ -91,9 +91,9 @@ export function Activities() {
       className='w-full px-8 md:px-20 lg:px-40 py-14 bg-[url(/green-bg.png)] bg-cover bg-center flex flex-col justify-center items-center gap-10'
     >
       <div className='w-full flex flex-col justify-start items-center gap-6'>
-        <h2 className='text-yellow-600 text-5xl font-pinyon font-bold text-center max-w-lg'>
+        <h1 className='text-yellow-600 text-5xl font-pinyon font-bold text-center max-w-lg'>
           Activities
-        </h2>
+        </h1>
       </div>
 
       <div className='w-full space-y-8'>

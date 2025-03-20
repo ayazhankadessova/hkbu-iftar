@@ -15,17 +15,17 @@ export function About() {
       className='w-full px-8 md:px-20 lg:px-40 py-14 bg-zinc-100/50 flex flex-col justify-center items-center gap-10'
     >
       <div className='w-full flex flex-col justify-start items-center gap-6'>
-        <h2 className='text-green-950 text-5xl font-pinyon font-bold leading-tight text-center max-w-lg'>
+        <h1 className='text-green-950 text-5xl font-pinyon font-bold leading-tight text-center max-w-lg'>
           What is Iftar?
-        </h2>
+        </h1>
       </div>
       <div className='w-full flex flex-col gap-6'>
-        <p className='text-lg text-green-950/70 leading-relaxed'>
+        <p className='text-lg text-green-950/70 leading-relaxed font-sans'>
           Iftar, the traditional breaking of the fast at sunset during the holy
           month of Ramadan, represents a time of gratitude and community.
         </p>
 
-        <p className='text-lg text-green-950/70 leading-relaxed'>
+        <p className='text-lg text-green-950/70 leading-relaxed font-sans'>
           It is our most joyous annual celebration that showcases the vibrant
           spirit of our Muslim community.{' '}
           <span className='text-rose-400'>Everyone is warmly welcome</span>:

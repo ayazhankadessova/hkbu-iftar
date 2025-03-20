@@ -10,9 +10,9 @@ export function SiteFooter() {
       className='w-full px-8 md:px-20 lg:px-40 pt-14 pb-10 bg-[url(/green-bg.png)] bg-cover bg-center flex justify-center items-center flex flex-col gap-8'
     >
       <div className='gap-4 items-center flex flex-col justify-center'>
-        <h3 className='text-center text-yellow-600 text-5xl font-pinyon font-bold'>
+        <h1 className='text-center text-yellow-600 text-5xl font-pinyon font-bold'>
           Contact
-        </h3>
+        </h1>
         <div className='flex gap-4 justify-center text-green-950 text-4xl'>
           <a
             href='https://wa.me/+77778502000'

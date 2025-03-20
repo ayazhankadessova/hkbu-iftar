@@ -1,19 +1,9 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
+// import localFont from 'next/font/local'
 import './globals.css'
-import { Pinyon_Script, Ephesis } from 'next/font/google'
+import { Pinyon_Script, Montserrat } from 'next/font/google'
 import { SiteFooter } from '@/components/site-footer'
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-})
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
-})
 
 // Load Pinyon Script font
 const pinyonScript = Pinyon_Script({
@@ -23,12 +13,12 @@ const pinyonScript = Pinyon_Script({
   variable: '--font-pinyon-script',
 })
 
-// Load Ephesis font
-const ephesis = Ephesis({
-  weight: '400', // Only available in weight 400
+// Load Raleway font
+const montserrat = Montserrat({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-ephesis',
+  variable: '--font-montserrat',
 })
 
 export const metadata: Metadata = {
@@ -51,7 +41,7 @@ export default function RootLayout({
         ></script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${ephesis.variable} ${pinyonScript.variable} antialiased text-green-950`}
+        className={` ${pinyonScript.variable} ${montserrat.variable} antialiased text-green-950`}
       >
         {children}
         <SiteFooter />

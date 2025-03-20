@@ -13,7 +13,6 @@ export default function Home() {
   return (
     <div className='min-h-screen flex flex-col'>
       <SiteHeader />
-
       <Hero
         title={'Annual Iftar'}
         subtitle={'Join us to celebrate Ramadan!'}
