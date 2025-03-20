@@ -25,7 +25,7 @@ export function Schedule() {
       className='w-full px-8 md:px-20 lg:px-40 py-14 bg-white flex flex-col justify-center items-center gap-10'
     >
       <div className='w-full flex flex-col justify-start items-center gap-6'>
-        <h1 className='text-yellow-600 text-5xl font-pinyon font-bold text-center max-w-lg'>
+        <h1 className='text-yellow-600 text-5xl font-pinyon font-semibold text-center max-w-lg'>
           Schedule
         </h1>
       </div>

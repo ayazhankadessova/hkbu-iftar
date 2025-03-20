@@ -18,13 +18,11 @@ export function Hero({ title, subtitle, date }: Readonly<HeroProps>) {
         />
       </div>
       <div className='flex-1 flex flex-col justify-center items-center text-center gap-6'>
-        <h1 className='text-yellow-500 text-7xl font-pinyon font-bold'>
+        <h1 className='text-yellow-600 text-7xl font-pinyon font-semibold'>
           {title}
         </h1>
         <div className='gap-2 flex flex-col'>
-          <h3 className='text-green-950 text-xl'>
-            {subtitle}
-          </h3>
+          <h3 className='text-green-950 text-xl'>{subtitle}</h3>
           <p className='text-green-950 text-sm'>{date}</p>
         </div>
       </div>
