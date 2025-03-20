@@ -63,7 +63,7 @@ function ActivityItem({
       <div className='flex-1 space-y-2'>
         {link && href ? (
           <Link href={href} className='group'>
-            <h3 className='text-green-950 text-xl font-medium'>
+            <h3 className='text-green-950 text-lg font-medium'>
               {title}{' '}
               {link && (
                 <span className='text-sm font-semibold inline-block transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-0.5'>
@@ -73,7 +73,7 @@ function ActivityItem({
             </h3>
           </Link>
         ) : (
-          <h3 className='text-green-950 text-xl font-medium'>
+          <h3 className='text-green-950 text-lg font-medium'>
             {title}
           </h3>
         )}

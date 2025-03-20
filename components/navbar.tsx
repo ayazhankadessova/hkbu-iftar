@@ -25,7 +25,7 @@ export function NavBar() {
         <div className='flex items-center gap-2'>
           <Link href='/' className='flex items-center gap-2'>
             <MoonStar className='h-6 w-6 text-emerald-600' />
-            <span className='font-bold text-xl'>Uni Iftar</span>
+            <span className='font-bold text-lg'>Uni Iftar</span>
           </Link>
         </div>
 

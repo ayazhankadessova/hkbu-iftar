@@ -11,9 +11,9 @@ function ScheduleItem({ icon, title, time }: ScheduleItemType) {
         {icon}
       </div>
       <div className='flex-1'>
-        <h3 className='text-lime-900 text-xl font-medium'>{title}</h3>
+        <h3 className='text-lime-900 text-lg font-normal'>{title}</h3>
       </div>
-      <div className='text-lime-900 text-xl'>{time}</div>
+      <div className='text-lime-900 text-lg'>{time}</div>
     </div>
   )
 }

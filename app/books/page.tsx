@@ -50,7 +50,7 @@ export default function BooksPage() {
 
                 {/* Book details */}
                 <div className='p-6 md:w-3/4'>
-                  <h2 className='text-xl md:text-xl font-medium text-green-950 mb-2'>
+                  <h2 className='text-lg md:text-lg font-medium text-green-950 mb-2'>
                     {book.title}
                   </h2>
 

@@ -27,7 +27,7 @@ export function FAQ() {
               value={item.id}
               className='border-b border-red-400/30'
             >
-              <AccordionTrigger className='text-green-950 text-xl font-medium'>
+              <AccordionTrigger className='text-green-950 text-lg font-normal'>
                 {item.question}
               </AccordionTrigger>
               <AccordionContent className='text-green-950/70'>
